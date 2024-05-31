@@ -98,11 +98,11 @@
     }
     </style>
   <div class="wrap">
-        <h1 id="domain"></h1>
-        <script>
-        // 获取跳转页面前域名
-        var domainName = window.location.search.replace("?domain=", "").split("&")[0];
-        document.getElementById("domain").innerText = domainName;
+    <h1 id="domain"></h1>
+    <script>
+        var domainName = window.location.hostname;
+        var capitalizedDomain = domainName.charAt(0).toUpperCase() + domainName.slice(1);
+        document.getElementById("domain").innerText = capitalizedDomain;
         </script> 
         <address><a href="http://www.dan.com">DAN</a> | <a href="http://www.escrow.com">ESCROW</a> | <a href="http://www.4.cn">4.cn</a> | <a href="http://www.sedo.com">SEDO</a></address>
         <br>
