@@ -98,10 +98,11 @@
     }
     </style>
   <div class="wrap">
-    <h1></h1>
-    <p id="domain"></p>
+    <h1 id="domain"></h1>
     <script>
-        document.getElementById("domain").innerText = window.location.hostname;
+        var domainName = window.location.hostname;
+        var capitalizedDomain = domainName.charAt(0).toUpperCase() + domainName.slice(1);
+        document.getElementById("domain").innerText = capitalizedDomain;
     </script>
       <address><a href="http://www.dan.com">DAN</a> | <a href="http://www.epik.com">EPIK</a> | <a href="http://www.SEDO.com">SEDO</a> | <a href="http://www.escrow.com">ESCROW</a></address>
       <br>
