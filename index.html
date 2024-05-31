@@ -100,9 +100,11 @@
   <div class="wrap">
     <h1 id="domain"></h1>
     <script>
-        var domainName = window.location.hostname;
-        var capitalizedDomain = domainName.charAt(0).toUpperCase() + domainName.slice(1);
-        document.getElementById("domain").innerText = capitalizedDomain;
+        // 获取 URL 参数中的域名信息
+        const urlParams = new URLSearchParams(window.location.search);
+        const domainName = urlParams.get('domain');
+        // 显示被跳转的域名
+        document.getElementById("domain").innerText = domainName;
         </script> 
         <address><a href="http://www.dan.com">DAN</a> | <a href="http://www.escrow.com">ESCROW</a> | <a href="http://www.4.cn">4.cn</a> | <a href="http://www.sedo.com">SEDO</a></address>
         <br>
